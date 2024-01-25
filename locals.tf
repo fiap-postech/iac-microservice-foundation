@@ -10,4 +10,14 @@ locals {
   }
 
   lambda_signer = "json-web-token-signer"
+
+  service_cluster = {
+    name = "tech-challenge"
+
+    provider = {
+      name   = "FARGATE_SPOT"
+      weight = 100
+      base   = 1
+    }
+  }
 }
