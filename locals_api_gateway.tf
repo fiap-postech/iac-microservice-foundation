@@ -26,7 +26,7 @@ locals {
       identity_sources                  = ["$request.header.Authorization"]
       name                              = "ESFINGE"
       authorizer_payload_format_version = "1.0"
-      authorizer_result_ttl_in_seconds  = 300
+      authorizer_result_ttl_in_seconds  = 0
       enable_simple_responses           = false
     }
   }
