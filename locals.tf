@@ -4,9 +4,9 @@ locals {
   vpc_name = "tc-vpc"
 
   bucket = {
-    name      = "tc-cdn"
-    log       = "log-tc-cdn"
-    origin_id = "tc-cdn-origin"
+    name      = "fiapsoat2grupo13-cdn"
+    log       = "log-fiapsoat2grupo13-cdn"
+    origin_id = "fiapsoat2grupo13-cdn-origin"
   }
 
   lambda_signer = "json-web-token-signer"
