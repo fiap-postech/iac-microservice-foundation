@@ -71,6 +71,11 @@ resource "aws_apigatewayv2_integration" "auth_integration" {
   integration_uri  = data.aws_lambda_function.lambda_signer.invoke_arn
   integration_type = "AWS_PROXY"
 
+  request_parameters = {
+    "overwrite:header.x-employee-id"    = "$context.authorizer.employeeId"
+    "overwrite:header.x-employee-email" = "$context.authorizer.employeeEmail"
+  }
+
   depends_on = [data.aws_lambda_function.lambda_signer]
 }
 
